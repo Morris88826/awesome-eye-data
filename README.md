@@ -49,6 +49,15 @@ Each annotation CSV has the following columns:
 | `gaze_x/y/z` | Normalized 3D gaze vector |
 | `pupil_center_x/y` | Pupil center in image coordinates |
 
+## Visualization
+
+Open [`notebooks/visualize.ipynb`](notebooks/visualize.ipynb) to browse sample frames from any recording. Set `video_path` to a clip under `./data/` and the notebook will display 10 evenly-spaced frames annotated with:
+
+- Validity status (green = valid, red = invalid)
+- Pupil center (blue dot)
+- Gaze direction (yellow arrow)
+- Iris mask overlay (if available)
+
 ## Citations
 
 If you use this repository, please cite:
