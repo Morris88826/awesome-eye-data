@@ -118,7 +118,7 @@ if __name__ == "__main__":
             left_gaze_yaw = annotation_df.iloc[frame_id]['calibrated_OS_pupilCenter_yaw'] * np.pi / 180.0  # Convert from degrees to radians
             left_gaze_pitch = annotation_df.iloc[frame_id]['calibrated_OS_pupilCenter_pitch'] * np.pi / 180.0  # Convert from degrees to radians
             left_gaze_vec = np.stack([
-                np.cos(left_gaze_pitch) * np.sin(left_gaze_yaw),
+                -np.cos(left_gaze_pitch) * np.sin(left_gaze_yaw),
                 -np.sin(left_gaze_pitch),
                 np.cos(left_gaze_yaw) * np.cos(left_gaze_pitch)
             ], axis=-1)
@@ -140,7 +140,7 @@ if __name__ == "__main__":
             right_gaze_yaw = annotation_df.iloc[frame_id]['calibrated_OD_pupilCenter_yaw'] * np.pi / 180.0  # Convert from degrees to radians
             right_gaze_pitch = annotation_df.iloc[frame_id]['calibrated_OD_pupilCenter_pitch'] * np.pi / 180.0  # Convert from degrees to radians
             right_gaze_vec = np.stack([
-                np.cos(right_gaze_pitch) * np.sin(right_gaze_yaw),
+                -np.cos(right_gaze_pitch) * np.sin(right_gaze_yaw),
                 -np.sin(right_gaze_pitch),
                 np.cos(right_gaze_yaw) * np.cos(right_gaze_pitch)
             ], axis=-1)
